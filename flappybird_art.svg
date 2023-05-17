@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 135.46666 135.46667"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="flappybird_art.svg"
+   inkscape:export-filename="Assets\Resources\Bird\Variant 1\Idle\background_3.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.53984845"
+     inkscape:cx="-734.46539"
+     inkscape:cy="1202.1892"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#24dbff;fill-opacity:1;stroke-width:1;stroke-linecap:square;paint-order:fill markers stroke"
+       id="rect238"
+       width="508"
+       height="285.75"
+       x="-910.75378"
+       y="105.35356" />
+    <rect
+       style="opacity:1;fill:#c8f6ff;fill-opacity:1;stroke-width:1;stroke-linecap:square;paint-order:fill markers stroke"
+       id="rect3132"
+       width="81.847816"
+       height="31.856934"
+       x="-884.77814"
+       y="254.83611" />
+    <rect
+       style="opacity:1;fill:#c8f6ff;fill-opacity:1;stroke-width:1;stroke-linecap:square;paint-order:fill markers stroke"
+       id="rect3134"
+       width="81.847816"
+       height="31.856934"
+       x="-537.29248"
+       y="144.07199"
+       inkscape:export-filename="Assets\Art\Background\background_frame2.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="opacity:1;fill:#c8f6ff;fill-opacity:1;stroke-width:1;stroke-linecap:square;paint-order:fill markers stroke"
+       id="rect3136"
+       width="81.847816"
+       height="31.856934"
+       x="-590.34436"
+       y="240.87697" />
+    <rect
+       style="opacity:1;fill:#c8f6ff;fill-opacity:1;stroke-width:1;stroke-linecap:square;paint-order:fill markers stroke"
+       id="rect3138"
+       width="81.847816"
+       height="31.856934"
+       x="-745.58783"
+       y="320.02029" />
+    <rect
+       style="fill:#99ff2e;fill-opacity:1;stroke-width:0.861419;stroke-linecap:square;paint-order:fill markers stroke"
+       id="rect290"
+       width="508"
+       height="33.835167"
+       x="-910.75378"
+       y="357.2684"
+       inkscape:export-filename="Assets\Resources\Floor\rect2920.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#518618;fill-opacity:1;stroke-width:1;stroke-linecap:square;paint-order:fill markers stroke"
+       id="path952"
+       cx="-784.14264"
+       cy="369.30463"
+       rx="27.307022"
+       ry="6.7415509" />
+    <ellipse
+       style="fill:#518618;fill-opacity:1;stroke-width:1;stroke-linecap:square;paint-order:fill markers stroke"
+       id="ellipse954"
+       cx="-695.49084"
+       cy="376.2626"
+       rx="27.307022"
+       ry="6.7415509" />
+    <ellipse
+       style="fill:#518618;fill-opacity:1;stroke-width:1;stroke-linecap:square;paint-order:fill markers stroke"
+       id="ellipse956"
+       cx="-861.53705"
+       cy="378.01581"
+       rx="27.307022"
+       ry="6.7415509" />
+    <ellipse
+       style="fill:#518618;fill-opacity:1;stroke-width:1;stroke-linecap:square;paint-order:fill markers stroke"
+       id="ellipse958"
+       cx="-614.03314"
+       cy="379.69336"
+       rx="27.307022"
+       ry="6.7415509" />
+    <ellipse
+       style="fill:#518618;fill-opacity:1;stroke-width:1;stroke-linecap:square;paint-order:fill markers stroke"
+       id="ellipse960"
+       cx="-524.83374"
+       cy="367.93082"
+       rx="27.307022"
+       ry="6.7415509" />
+    <ellipse
+       style="fill:#518618;fill-opacity:1;stroke-width:1;stroke-linecap:square;paint-order:fill markers stroke"
+       id="ellipse962"
+       cx="-442.00571"
+       cy="377.73294"
+       rx="27.307022"
+       ry="6.7415509" />
+    <rect
+       style="fill:#ff2d2d;fill-opacity:1;stroke-width:1.5975;stroke-linecap:square;paint-order:fill markers stroke"
+       id="rect2244"
+       width="31.366827"
+       height="215.17462"
+       x="-563.26819"
+       y="-109.82106" />
+    <g
+       id="g3722"
+       inkscape:export-filename="Assets\Resources\Floor\rect290.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="opacity:0;fill:#99ff2e;fill-opacity:1;stroke-width:1.21938;stroke-linecap:square;paint-order:fill markers stroke"
+         id="rect3712"
+         width="508"
+         height="67.797829"
+         x="34.655777"
+         y="391.23108"
+         inkscape:export-filename="Assets\Resources\Floor\rect2920.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <rect
+         style="fill:#99ff2e;fill-opacity:1;stroke-width:0.862232;stroke-linecap:square;paint-order:fill markers stroke"
+         id="rect3698"
+         width="508"
+         height="33.898918"
+         x="34.655777"
+         y="425.13"
+         inkscape:export-filename="Assets\Resources\Floor\rect2920.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <ellipse
+         style="fill:#518618;fill-opacity:1;stroke-width:1;stroke-linecap:square;paint-order:fill markers stroke"
+         id="ellipse3700"
+         cx="152.25641"
+         cy="424.75388"
+         rx="27.307022"
+         ry="6.7415509" />
+      <ellipse
+         style="fill:#518618;fill-opacity:1;stroke-width:1;stroke-linecap:square;paint-order:fill markers stroke"
+         id="ellipse3702"
+         cx="241.60133"
+         cy="423.39447"
+         rx="27.307022"
+         ry="6.7415509" />
+      <ellipse
+         style="fill:#518618;fill-opacity:1;stroke-width:1;stroke-linecap:square;paint-order:fill markers stroke"
+         id="ellipse3704"
+         cx="78.327606"
+         cy="423.06833"
+         rx="27.307022"
+         ry="6.7415509" />
+      <ellipse
+         style="fill:#518618;fill-opacity:1;stroke-width:1;stroke-linecap:square;paint-order:fill markers stroke"
+         id="ellipse3706"
+         cx="327.21771"
+         cy="426.82523"
+         rx="27.307022"
+         ry="6.7415509" />
+      <ellipse
+         style="fill:#518618;fill-opacity:1;stroke-width:1;stroke-linecap:square;paint-order:fill markers stroke"
+         id="ellipse3708"
+         cx="419.88269"
+         cy="424.07318"
+         rx="27.307022"
+         ry="6.7415509" />
+      <ellipse
+         style="fill:#518618;fill-opacity:1;stroke-width:1;stroke-linecap:square;paint-order:fill markers stroke"
+         id="ellipse3710"
+         cx="504.09695"
+         cy="425.55792"
+         rx="27.307022"
+         ry="6.7415509" />
+    </g>
+    <g
+       id="g4546"
+       transform="matrix(1.637826,0,0,1.637826,-202.61744,-100.22053)"
+       inkscape:export-filename="Assets\Resources\Bird\Variant 1\Idle\g4546.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <ellipse
+         style="opacity:1;fill:#fffe2d;fill-opacity:1;stroke-width:1;stroke-linecap:square;paint-order:fill markers stroke"
+         id="path3803"
+         cx="166.521"
+         cy="111.93815"
+         rx="26.16511"
+         ry="11.436406" />
+      <ellipse
+         style="opacity:1;fill:#fffe2d;fill-opacity:1;stroke-width:0.763401;stroke-linecap:square;paint-order:fill markers stroke"
+         id="ellipse4533"
+         cx="188.87398"
+         cy="98.94223"
+         rx="15.24854"
+         ry="11.436406" />
+      <ellipse
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:0.107949;stroke-linecap:square;paint-order:fill markers stroke"
+         id="ellipse4535"
+         cx="197.8112"
+         cy="96.969391"
+         rx="2.1562235"
+         ry="1.6171677" />
+      <ellipse
+         style="opacity:1;fill:#ffce2d;fill-opacity:1;stroke-width:0.696311;stroke-linecap:square;paint-order:fill markers stroke"
+         id="ellipse4537"
+         cx="158.59622"
+         cy="100.51004"
+         rx="26.16511"
+         ry="5.5449228" />
+      <ellipse
+         style="opacity:1;fill:#ffce2d;fill-opacity:1;stroke-width:0.696311;stroke-linecap:square;paint-order:fill markers stroke"
+         id="ellipse4539"
+         cx="154.69136"
+         cy="93.091019"
+         rx="26.16511"
+         ry="5.5449228" />
+    </g>
+    <g
+       id="g1847"
+       inkscape:export-filename="Assets\Resources\Pipes\Variant 2\Top\g4026.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       transform="matrix(-0.50072791,0,0,-1,-223.00795,591.15264)">
+      <rect
+         style="fill:#ffce2d;fill-opacity:0;stroke-width:1.2572;stroke-linecap:square;paint-order:fill markers stroke"
+         id="rect478"
+         width="67.73333"
+         height="270.93332"
+         x="-171.19954"
+         y="160.10966" />
+      <g
+         id="g406"
+         transform="matrix(1.2414379,0,0,1.3368271,542.4597,-73.908357)"
+         inkscape:export-filename="Assets\Resources\Pipes\Variant 1\Bottom\g1847.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96">
+        <rect
+           style="fill:#ff802d;fill-opacity:1;stroke-width:1.8223;stroke-linecap:square;paint-order:fill markers stroke"
+           id="rect1100"
+           width="44.766426"
+           height="196.18704"
+           x="525.2016"
+           y="-372.11597"
+           inkscape:export-filename="Assets\Resources\Pipes\Variant 1\Top\g1847.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96"
+           transform="scale(-1)"
+           ry="0" />
+        <rect
+           style="fill:#ffce2d;stroke-width:0.8804;stroke-linecap:square;paint-order:fill markers stroke"
+           id="rect368"
+           width="49.12011"
+           height="11.374449"
+           x="-572.1449"
+           y="175.92892" />
+      </g>
+    </g>
+    <ellipse
+       style="fill:#ffd9c0;fill-opacity:1;stroke-width:1.11835;stroke-linecap:square;paint-order:fill markers stroke"
+       id="path379"
+       cx="-154.89113"
+       cy="294.68027"
+       rx="6.6164403"
+       ry="107.57842" />
+  </g>
+</svg>
