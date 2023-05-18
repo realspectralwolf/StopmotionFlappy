@@ -13,11 +13,13 @@ public class GameSettings : ScriptableObject
     public float floorHeight = 0;
     public float floorColliderHeight = 0;
 
-    [Header("Animation Frame Intervals")]
-    public float playerInterval = 0.3f;
-    public float backgroundInterval = 0.3f;
-    public float floorInterval = 0.3f;
-    public float pipesInterval = 0.3f;
+    [Header("Animation Speed")]
+    public float playerIdleAnimSpeed = 1;
+    public float playerJumpAnimSpeed = 1;
+    public float playerDeadAnimSpeed = 1;
+    public float backgroundAnimSpeed = 1;
+    public float floorAnimSpeed = 1;
+    public float pipesAnimSpeed = 1;
 
     [Header("Others")]
     public int maxVariants = 10;

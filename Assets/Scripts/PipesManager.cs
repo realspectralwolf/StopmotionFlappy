@@ -38,7 +38,7 @@ public class PipesManager : MonoBehaviour
             Vector3 pos = Vector3.zero;
             pos.x = initialDisantce + spacing * i;
 
-            var newPipe = Instantiate(pipePrefab, pos, Quaternion.identity);
+            var newPipe = Instantiate(pipePrefab, pos, Quaternion.identity, transform);
             newPipe.Initialize(this);
 
             if (i == poolSize - 1)

@@ -6,7 +6,7 @@ public class PlayerDebug : MonoBehaviour
 {
     [SerializeField] GameSettings settings;
     [SerializeField] Transform spriteTransform;
-    [SerializeField] Collider2D collider;
+    [SerializeField] Collider2D pCollider;
     [SerializeField] Color debugColor = Color.red;
 
     // Start is called before the first frame update
@@ -25,11 +25,11 @@ public class PlayerDebug : MonoBehaviour
     {
         if (Application.isPlaying) return;
 
-        collider.transform.localScale = settings.playerColliderSize;
+        pCollider.transform.localScale = settings.playerColliderSize;
 
         spriteTransform.localScale = Vector3.one * settings.playerImageSize;
 
-        DrawEllipseGizmo(collider.transform.lossyScale, 0);
+        DrawEllipseGizmo(pCollider.transform.lossyScale, 0);
     }
 
     private void DrawEllipseGizmo(Vector2 size, float rotation)

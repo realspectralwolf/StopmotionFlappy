@@ -25,24 +25,24 @@ public class Pipe : MonoBehaviour
         topRenderer.transform.localPosition = new Vector3(0, pipesMgr.openingSize / 2f, 0);
         bottomRender.transform.localPosition = new Vector3(0, -pipesMgr.openingSize / 2f, 0);
 
-        topRenderer._framesInterval = settings.pipesInterval;
-        bottomRender._framesInterval = settings.pipesInterval;
-
         // Random variant that exists
         List<int> exisitingVariants = new();
         for (int i = 1; i < settings.maxVariants; i++)
         {
-            if (Tools.CheckIfFolderExists($"Pipes/Variant {i}"))
+            if (Tools.CheckIfFolderExists($"Pipes (128x1024)/Variant {i}"))
             {
-                print("exits");
                 exisitingVariants.Add(i);
             }
         }
-        
-        print(Random.Range(0, exisitingVariants.Count));
+
+
+
+        print(exisitingVariants.Count);
+
         int r = exisitingVariants[Random.Range(0, exisitingVariants.Count)];
-        topRenderer._framesPath = $"Pipes/Variant {r}/Top";
-        bottomRender._framesPath = $"Pipes/Variant {r}/Bottom";
+
+        topRenderer.SetAnimTo($"Pipes (128x1024)/Variant {r}/Top", settings.pipesAnimSpeed);
+        bottomRender.SetAnimTo($"Pipes (128x1024)/Variant {r}/Bottom", settings.pipesAnimSpeed);
     }
 
     // Update is called once per frame

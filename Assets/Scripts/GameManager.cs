@@ -12,15 +12,8 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void DoGameOver()
     {
-        Debug.Log(Resources.LoadAll($"Pipes/Variant 2").Length);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        moveSpeed = 0;
     }
 }

@@ -16,8 +16,10 @@ MonoBehaviour:
   playerColliderSize: {x: 0.97, y: 0.63}
   floorHeight: 0
   floorColliderHeight: -1.24
-  playerInterval: 0.3
-  backgroundInterval: 1
-  floorInterval: 0.3
-  pipesInterval: 0.3
+  playerIdleAnimSpeed: 1
+  playerJumpAnimSpeed: 1
+  playerDeadAnimSpeed: 1
+  backgroundAnimSpeed: 1
+  floorAnimSpeed: 1
+  pipesAnimSpeed: 1
   maxVariants: 10

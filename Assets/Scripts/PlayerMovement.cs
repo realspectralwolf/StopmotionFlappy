@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpForce = 20;
     float fallVelocity = 0;
 
+    public event System.Action OnJumped;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             fallVelocity = jumpForce;
+            OnJumped?.Invoke();
         }
 
         transform.position += Vector3.up * fallVelocity * Time.deltaTime;
