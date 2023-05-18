@@ -1,0 +1,6 @@
+- scene restart
+- ui animations
+- moving platforms after some time
+- optional portal to mirror screen
+- optional coin to collect
+- optional bird rotation and stretches

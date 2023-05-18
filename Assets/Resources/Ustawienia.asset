@@ -17,9 +17,12 @@ MonoBehaviour:
   floorHeight: 0
   floorColliderHeight: -1.24
   playerIdleAnimSpeed: 1
-  playerJumpAnimSpeed: 1
+  playerJumpAnimSpeed: 2
   playerDeadAnimSpeed: 1
   backgroundAnimSpeed: 1
   floorAnimSpeed: 1
   pipesAnimSpeed: 1
+  font: 0
+  fontSize: 30
+  fontColor: {r: 1, g: 1, b: 1, a: 1}
   maxVariants: 10

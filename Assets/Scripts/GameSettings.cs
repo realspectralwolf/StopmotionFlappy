@@ -21,6 +21,19 @@ public class GameSettings : ScriptableObject
     public float floorAnimSpeed = 1;
     public float pipesAnimSpeed = 1;
 
-    [Header("Others")]
-    public int maxVariants = 10;
+    [Header("Font")]
+    public Font font;
+    public float fontSize = 30;
+    public Color fontColor = Color.white;
+
+    [HideInInspector] public int maxVariants = 10;
+
+    public enum Font{
+        Atma,
+        Bangers,
+        Norican,
+        PressStart,
+        RedHat,
+        ReggaeOne
+    }
 }

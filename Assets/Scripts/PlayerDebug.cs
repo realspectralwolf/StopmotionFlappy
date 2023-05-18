@@ -12,24 +12,28 @@ public class PlayerDebug : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        ApplySettingsToSelf();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-    private void OnDrawGizmos()
+#if UNITY_EDITOR
+    void OnDrawGizmos()
     {
+        if (DataManager.instance == null) return;
+
         if (Application.isPlaying) return;
 
+        ApplySettingsToSelf();
+
+        DrawEllipseGizmo(pCollider.transform.lossyScale, 0);
+    }
+#endif
+
+    void ApplySettingsToSelf()
+    {
         pCollider.transform.localScale = settings.playerColliderSize;
 
         spriteTransform.localScale = Vector3.one * settings.playerImageSize;
-
-        DrawEllipseGizmo(pCollider.transform.lossyScale, 0);
     }
 
     private void DrawEllipseGizmo(Vector2 size, float rotation)
