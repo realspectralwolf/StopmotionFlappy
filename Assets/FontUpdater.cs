@@ -16,7 +16,10 @@ public class FontUpdater : MonoBehaviour
 #if UNITY_EDITOR
     void OnDrawGizmos()
     {
-        if (DataManager.instance == null) return;
+        if (DataManager.instance == null)
+        {
+            return;
+        };
 
         ApplySettingsToSelf();
     }

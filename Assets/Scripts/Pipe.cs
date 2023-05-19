@@ -35,10 +35,6 @@ public class Pipe : MonoBehaviour
             }
         }
 
-
-
-        print(exisitingVariants.Count);
-
         int r = exisitingVariants[Random.Range(0, exisitingVariants.Count)];
 
         topRenderer.SetAnimTo($"Pipes (128x1024)/Variant {r}/Top", settings.pipesAnimSpeed);

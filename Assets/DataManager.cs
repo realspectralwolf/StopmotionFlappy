@@ -11,6 +11,11 @@ public class DataManager : MonoBehaviour
 
     public static DataManager instance;
 
+    void Awake()
+    {
+        instance = this;
+    }
+
 #if UNITY_EDITOR
     void OnDrawGizmos()
     {

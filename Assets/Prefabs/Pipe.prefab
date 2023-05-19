@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 9095806345720986816}
   m_Layer: 0
   m_Name: ScoreTrigger
-  m_TagString: PipeScore
+  m_TagString: ScoreTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

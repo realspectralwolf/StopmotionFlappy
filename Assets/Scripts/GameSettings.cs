@@ -23,7 +23,7 @@ public class GameSettings : ScriptableObject
 
     [Header("Font")]
     public Font font;
-    public float fontSize = 30;
+    [HideInInspector] public float fontSize = 30;
     public Color fontColor = Color.white;
 
     [HideInInspector] public int maxVariants = 10;

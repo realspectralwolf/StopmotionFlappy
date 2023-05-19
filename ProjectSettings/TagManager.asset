@@ -4,9 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - PipeScore
   - PipeCollider
   - Floor
+  - ScoreTrigger
   layers:
   - Default
   - TransparentFX

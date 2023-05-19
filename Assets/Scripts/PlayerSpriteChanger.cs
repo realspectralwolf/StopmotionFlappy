@@ -44,12 +44,12 @@ public class PlayerSpriteChanger : MonoBehaviour
     private void OnEnable()
     {
         playerMovement.OnJumped += PlayJumpFrames;
-        PlayerLife.OnPlayerDied += SetToDeadAnimation;
+        Player.OnPlayerDied += SetToDeadAnimation;
     }
 
     private void OnDisable()
     {
         playerMovement.OnJumped -= PlayJumpFrames;
-        PlayerLife.OnPlayerDied -= SetToDeadAnimation;
+        Player.OnPlayerDied -= SetToDeadAnimation;
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerLife : MonoBehaviour
+public class Player : MonoBehaviour
 {
     [SerializeField] PolygonCollider2D _collider;
 
@@ -17,7 +17,10 @@ public class PlayerLife : MonoBehaviour
             DoDie();
         }
         
-        print(collision.tag);
+        else if (collision.CompareTag("ScoreTrigger"))
+        {
+
+        }
     }
 
     void DoDie()
@@ -29,5 +32,20 @@ public class PlayerLife : MonoBehaviour
         _collider.isTrigger = false;
         GameManager.instance.DoGameOver();
         OnPlayerDied?.Invoke();
+    }
+
+    private void EnableMovement()
+    {
+        GetComponent<PlayerMovement>().enabled = true;
+    }
+
+    private void OnEnable()
+    {
+        GameManager.OnGameplayStartAction += EnableMovement;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.OnGameplayStartAction -= EnableMovement;
     }
 }
