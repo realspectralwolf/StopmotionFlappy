@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 [CreateAssetMenu(menuName = "new GameSettings")]
 public class GameSettings : ScriptableObject
@@ -25,6 +28,9 @@ public class GameSettings : ScriptableObject
     public Font font;
     [HideInInspector] public float fontSize = 30;
     public Color fontColor = Color.white;
+
+    [Header("Credits")]
+    [TextArea(minLines: 2, maxLines: 12)] public string creditsText;
 
     [HideInInspector] public int maxVariants = 10;
 

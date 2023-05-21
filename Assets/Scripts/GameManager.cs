@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         if (skipMenu)
         {
             skipMenu = false;
-            StartGameplay();
+            //StartGameplay();
         }
     }
 
