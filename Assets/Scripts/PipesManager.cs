@@ -33,6 +33,8 @@ public class PipesManager : MonoBehaviour
 
     void SpawnPool()
     {
+        pipesUntilNextCollectible = Random.Range(0, 2);
+
         for (int i = 0; i < poolSize; i++)
         {
             Vector3 pos = Vector3.zero;
@@ -40,6 +42,7 @@ public class PipesManager : MonoBehaviour
 
             var newPipe = Instantiate(pipePrefab, pos, Quaternion.identity, transform);
             newPipe.Initialize(this);
+            HandleCollectibleSpawn(newPipe);
 
             if (i == poolSize - 1)
             {
@@ -50,19 +53,22 @@ public class PipesManager : MonoBehaviour
 
     public void ReusePipe(Pipe pipeToReuse)
     {
-        openingSize = 16 - GameManager.instance.difficulty * 2;
-        Debug.Log(openingSize);
         Vector3 pos = Vector3.zero;
         pos.x = lastPipeTransform.position.x + spacing;
         pipeToReuse.transform.position = pos;
         lastPipeTransform = pipeToReuse.transform;
-        if (GameManager.instance.difficulty > 2)
+        pipeToReuse.ReInitialize();
+        HandleCollectibleSpawn(pipeToReuse);
+    }
+
+    int pipesUntilNextCollectible = 0;
+    private void HandleCollectibleSpawn(Pipe pipe)
+    {
+        pipesUntilNextCollectible--;
+        if (pipesUntilNextCollectible < 0)
         {
-            pipeToReuse.ReInitialize(true);
-        }
-        else
-        {
-            pipeToReuse.ReInitialize();
+            pipesUntilNextCollectible = Random.Range(1, 2);
+            pipe.EnableCollectible();
         }
     }
 }

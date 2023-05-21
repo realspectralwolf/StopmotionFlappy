@@ -5,6 +5,7 @@ using TMPro;
 
 public class ScoreHighscore : MonoBehaviour
 {
+    [SerializeField] string prefix = "";
     TextMeshProUGUI _text;
     private void Start()
     {
@@ -14,6 +15,6 @@ public class ScoreHighscore : MonoBehaviour
 
     private void UpdateScore(int newPoints)
     {
-        _text.text = $"{newPoints}";
+        _text.text = prefix + $"{newPoints}";
     }
 }

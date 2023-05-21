@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
             skipMenu = false;
             //StartGameplay();
         }
+
+        pipesManager.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -46,6 +48,12 @@ public class GameManager : MonoBehaviour
     public void DoGameOver()
     {
         moveSpeed = 0;
+    }
+
+    public void OpenMenu()
+    {
+        skipMenu = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void RestartGameplay()
@@ -67,11 +75,7 @@ public class GameManager : MonoBehaviour
 
         if (points % difficultyStepPointsReq == 0)
         {
-            difficulty++;
-
-            Matrix4x4 mat = Camera.main.projectionMatrix;
-            mat *= Matrix4x4.Scale(new Vector3(-1, 1, 1));
-            Camera.main.projectionMatrix = mat;
+            difficulty = (difficulty < 10) ? difficulty + 1: 10;
         }
 
         OnPointsChanged?.Invoke(points);
@@ -85,5 +89,12 @@ public class GameManager : MonoBehaviour
         }
 
         OnGameEnded?.Invoke();
+    }
+
+    public void CollectedMirrorObject()
+    {
+        Matrix4x4 mat = Camera.main.projectionMatrix;
+        mat *= Matrix4x4.Scale(new Vector3(-1, 1, 1));
+        Camera.main.projectionMatrix = mat;
     }
 }

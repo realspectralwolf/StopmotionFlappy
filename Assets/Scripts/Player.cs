@@ -14,11 +14,6 @@ public class Player : MonoBehaviour
         {
             DoDie();
         }
-        
-        else if (collision.CompareTag("ScoreTrigger"))
-        {
-            GameManager.instance.PointCollected();
-        }
     }
 
     void DoDie()

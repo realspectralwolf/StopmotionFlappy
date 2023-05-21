@@ -5,12 +5,12 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class FramesRenderer : MonoBehaviour
 {
-    [SerializeField] private string _framesPath;
-    [SerializeField] private float _framesSpeed = 1;
+    [HideInInspector] private string _framesPath;
+    [HideInInspector] private float _framesSpeed = 1;
 
     SpriteRenderer _spriteRend = null;
     Sprite[] _frames;
-    [SerializeField] int _currentFrame = 0;
+    [HideInInspector] int _currentFrame = 0;
 
     string _fallbackPath = null;
     float _fallbackInterval = 1;
@@ -34,7 +34,7 @@ public class FramesRenderer : MonoBehaviour
     void OnEnable()
     {
         _spriteRend = GetComponent<SpriteRenderer>();
-        InitializeAnim();
+        //InitializeAnim();
     }
 
     void InitializeAnim()

@@ -8,6 +8,7 @@ public class Pipe : MonoBehaviour
 
     [SerializeField] FramesRenderer topRenderer;
     [SerializeField] FramesRenderer bottomRender;
+    [SerializeField] Collectible collectible;
     [SerializeField] GameSettings settings;
     [SerializeField] float moveUpDownSpeed = 1;
 
@@ -20,15 +21,33 @@ public class Pipe : MonoBehaviour
         ReInitialize();
     }
 
-    public void ReInitialize(bool newMoveUpDown = false)
+    public void EnableCollectible()
+    {
+        collectible.gameObject.SetActive(true);
+    }
+
+    public void ReInitialize()
     {
         Vector3 newPos = transform.position;
         initialY = Random.Range(pipesMgr.minY, pipesMgr.maxY);
-        newPos.y = initialY;
-        transform.position = newPos;
 
-        topRenderer.transform.localPosition = new Vector3(0, pipesMgr.openingSize / 2f, 0);
-        bottomRender.transform.localPosition = new Vector3(0, -pipesMgr.openingSize / 2f, 0);
+        newPos.y = initialY;
+
+        int chanceForMoving = 0 + GameManager.instance.difficulty * 10;
+
+        moveUpDown = Random.Range(0, 100) >= chanceForMoving ? false : true;
+        if (moveUpDown)
+        {
+            moveUpDownSpeed = Random.Range(0, 2) == 0 ? moveUpDownSpeed: -moveUpDownSpeed;
+        }
+
+        collectible.gameObject.SetActive(false);
+
+        transform.position = newPos;        
+
+        float holeSize = pipesMgr.openingSize - GameManager.instance.difficulty * 0.3f;
+        topRenderer.transform.localPosition = new Vector3(0, holeSize / 2f, 0);
+        bottomRender.transform.localPosition = new Vector3(0, -holeSize / 2f, 0);
 
         // Random variant that exists
         List<int> exisitingVariants = new();
@@ -44,8 +63,6 @@ public class Pipe : MonoBehaviour
 
         topRenderer.SetAnimTo($"Pipes (128x1024)/Variant {r}/Top", settings.pipesAnimSpeed);
         bottomRender.SetAnimTo($"Pipes (128x1024)/Variant {r}/Bottom", settings.pipesAnimSpeed);
-
-        moveUpDown = newMoveUpDown;
     }
 
     float _moveTimer = 0;
@@ -61,7 +78,7 @@ public class Pipe : MonoBehaviour
         if (moveUpDown)
         {
             _moveTimer += Time.deltaTime * moveUpDownSpeed;
-            float newY = pipesMgr.minY + Mathf.PingPong(initialY + _moveTimer, pipesMgr.maxY);
+            float newY = pipesMgr.minY + Mathf.PingPong(initialY - pipesMgr.minY + _moveTimer, pipesMgr.maxY);
             var newPos = transform.position;
             newPos.y = newY;
             transform.position = newPos;
