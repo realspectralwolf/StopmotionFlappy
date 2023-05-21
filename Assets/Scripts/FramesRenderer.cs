@@ -5,7 +5,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class FramesRenderer : MonoBehaviour
 {
-    [HideInInspector] private string _framesPath;
+    [SerializeField] private string _framesPath;
     [HideInInspector] private float _framesSpeed = 1;
 
     SpriteRenderer _spriteRend = null;

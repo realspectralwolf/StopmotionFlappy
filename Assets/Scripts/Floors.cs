@@ -11,20 +11,20 @@ public class Floors : MonoBehaviour
     private void Start()
     {
         // choose random variant
-        List<int> exisitingVariants = new();
+        List<string> exisitingVariants = new();
         for (int i = 1; i < settings.maxVariants; i++)
         {
-            if (Tools.CheckIfFolderExists($"Background (1920x1080)/Variant {i}"))
+            string path = $"Floor (1920x256)/Variant {i}";
+            if (Tools.CheckIfFolderExists(path))
             {
-                exisitingVariants.Add(i);
+                exisitingVariants.Add(path);
             }
         }
-
-        int variantIndex = exisitingVariants[Random.Range(0, exisitingVariants.Count)];
+        string variantPath = exisitingVariants[Random.Range(0, exisitingVariants.Count)];
 
         for (int i = 0; i < frameRends.Length; i++)
         {
-            frameRends[i].SetAnimTo($"Floor (1920x256)/Variant {variantIndex}", settings.backgroundAnimSpeed);
+            frameRends[i].SetAnimTo(variantPath, settings.backgroundAnimSpeed);
         }
     }
 
