@@ -9,6 +9,10 @@ public class Pipe : MonoBehaviour
     [SerializeField] FramesRenderer topRenderer;
     [SerializeField] FramesRenderer bottomRender;
     [SerializeField] GameSettings settings;
+    [SerializeField] float moveUpDownSpeed = 1;
+
+    [SerializeField] bool moveUpDown = false;
+    float initialY;
 
     public void Initialize(PipesManager newpipesMgr)
     {
@@ -16,10 +20,11 @@ public class Pipe : MonoBehaviour
         ReInitialize();
     }
 
-    public void ReInitialize()
+    public void ReInitialize(bool newMoveUpDown = false)
     {
         Vector3 newPos = transform.position;
-        newPos.y = Random.Range(pipesMgr.minY, pipesMgr.maxY);
+        initialY = Random.Range(pipesMgr.minY, pipesMgr.maxY);
+        newPos.y = initialY;
         transform.position = newPos;
 
         topRenderer.transform.localPosition = new Vector3(0, pipesMgr.openingSize / 2f, 0);
@@ -39,9 +44,11 @@ public class Pipe : MonoBehaviour
 
         topRenderer.SetAnimTo($"Pipes (128x1024)/Variant {r}/Top", settings.pipesAnimSpeed);
         bottomRender.SetAnimTo($"Pipes (128x1024)/Variant {r}/Bottom", settings.pipesAnimSpeed);
+
+        moveUpDown = newMoveUpDown;
     }
 
-    // Update is called once per frame
+    float _moveTimer = 0;
     void Update()
     {
         transform.position += Vector3.left * GameManager.instance.moveSpeed * Time.deltaTime;
@@ -49,6 +56,15 @@ public class Pipe : MonoBehaviour
         if (transform.position.x < pipesMgr.cutoffDistance)
         {
             pipesMgr.ReusePipe(this);
+        }
+
+        if (moveUpDown)
+        {
+            _moveTimer += Time.deltaTime * moveUpDownSpeed;
+            float newY = pipesMgr.minY + Mathf.PingPong(initialY + _moveTimer, pipesMgr.maxY);
+            var newPos = transform.position;
+            newPos.y = newY;
+            transform.position = newPos;
         }
     }
 }

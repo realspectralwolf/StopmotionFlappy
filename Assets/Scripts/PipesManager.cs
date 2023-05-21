@@ -50,10 +50,19 @@ public class PipesManager : MonoBehaviour
 
     public void ReusePipe(Pipe pipeToReuse)
     {
+        openingSize = 16 - GameManager.instance.difficulty * 2;
+        Debug.Log(openingSize);
         Vector3 pos = Vector3.zero;
         pos.x = lastPipeTransform.position.x + spacing;
         pipeToReuse.transform.position = pos;
         lastPipeTransform = pipeToReuse.transform;
-        pipeToReuse.ReInitialize();
+        if (GameManager.instance.difficulty > 2)
+        {
+            pipeToReuse.ReInitialize(true);
+        }
+        else
+        {
+            pipeToReuse.ReInitialize();
+        }
     }
 }

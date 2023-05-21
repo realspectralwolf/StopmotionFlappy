@@ -27,4 +27,14 @@ public class DataManager : MonoBehaviour
     {
         return fonts[(int)settings.font];
     }
+
+    public int GetHighscore()
+    {
+        return PlayerPrefs.GetInt("Highscore", 0);
+    }
+
+    public void SetHighscore(int newHighscore)
+    {
+        PlayerPrefs.SetInt("Highscore", newHighscore);
+    }
 }

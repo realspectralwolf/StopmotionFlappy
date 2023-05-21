@@ -6,9 +6,18 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public float moveSpeed = 1;
+    [SerializeField] private float speedChangeOverTime = 0.05f;
+    [SerializeField] private int difficultyStepPointsReq = 5;
+    public int difficulty = 0;
 
     public static bool skipMenu = false;
     public static event System.Action OnGameplayStartAction;
+    public static event System.Action<int> OnPointsChanged;
+    public static event System.Action OnGameEnded;
+
+    public int points = 0;
+
+    private bool isGameplay = false;
 
     [SerializeField] PipesManager pipesManager;
 
@@ -27,6 +36,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (!isGameplay) return;
+
+        moveSpeed += speedChangeOverTime * Time.deltaTime;
+    }
+
     public void DoGameOver()
     {
         moveSpeed = 0;
@@ -41,6 +57,33 @@ public class GameManager : MonoBehaviour
     public void StartGameplay()
     {
         OnGameplayStartAction?.Invoke();
+        isGameplay = true;
         pipesManager.gameObject.SetActive(true);
+    }
+
+    public void PointCollected()
+    {
+        points++;
+
+        if (points % difficultyStepPointsReq == 0)
+        {
+            difficulty++;
+
+            Matrix4x4 mat = Camera.main.projectionMatrix;
+            mat *= Matrix4x4.Scale(new Vector3(-1, 1, 1));
+            Camera.main.projectionMatrix = mat;
+        }
+
+        OnPointsChanged?.Invoke(points);
+    }
+
+    public void PlayerDied()
+    {
+        if (points > DataManager.instance.GetHighscore())
+        {
+            DataManager.instance.SetHighscore(points);
+        }
+
+        OnGameEnded?.Invoke();
     }
 }

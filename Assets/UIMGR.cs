@@ -23,13 +23,13 @@ public class UIMGR : MonoBehaviour
 
     private void OnEnable()
     {
-        Player.OnPlayerDied += SetPanelToEnded;
+        GameManager.OnGameEnded += SetPanelToEnded;
         GameManager.OnGameplayStartAction += SetPanelToGameplay;
     }
 
     private void OnDisable()
     {
-        Player.OnPlayerDied -= SetPanelToEnded;
+        GameManager.OnGameEnded -= SetPanelToEnded;
         GameManager.OnGameplayStartAction -= SetPanelToGameplay;
     }
 

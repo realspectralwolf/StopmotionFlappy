@@ -8,8 +8,6 @@ public class Player : MonoBehaviour
 
     bool isAlive = true;
 
-    public static event System.Action OnPlayerDied;
-
     public void Collided(Collider2D collision)
     {
         if (isAlive && (collision.CompareTag("Floor") || collision.CompareTag("PipeCollider")))
@@ -19,7 +17,7 @@ public class Player : MonoBehaviour
         
         else if (collision.CompareTag("ScoreTrigger"))
         {
-
+            GameManager.instance.PointCollected();
         }
     }
 
@@ -31,7 +29,7 @@ public class Player : MonoBehaviour
         isAlive = false;
         _collider.isTrigger = false;
         GameManager.instance.DoGameOver();
-        OnPlayerDied?.Invoke();
+        GameManager.instance.PlayerDied();
     }
 
     private void EnableMovement()
