@@ -234,7 +234,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8516358345208988553}
   - {fileID: 8516358344934003031}
@@ -269,9 +269,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f64b25f0a8e5d243b55b4a7e02b5a1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: 10
-  jumpForce: 4
-  speedImpactOnValues: 0.2
+  gravity: 8
+  gravityOverSpeed: 0.34
+  jumpForce: 4.4
+  jumpOverSpeed: 0.12
+  spriteTransform: {fileID: 8516358345208988553}
 --- !u!114 &8516358346618518102
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
     private float initialGravity;
     private float initialJumpForce;
 
+    Vector3 prevPos;
+
     // Update is called once per frame
     void Update()
     {
