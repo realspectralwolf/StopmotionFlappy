@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -8,11 +8,13 @@ using UnityEngine.UI;
 [CreateAssetMenu(menuName = "new GameSettings")]
 public class GameSettings : ScriptableObject
 {
+    public string gameTitle = "Skok w bok";
+
     [Header("Player")]
     public float playerImageSize = 1;
     public Vector2 playerColliderSize = new Vector2(1, 1);
 
-    [Header("Floor")]
+    [Header("Floor (czerwona linia podłogi)")]
     public float floorHeight = 0;
     public float floorColliderHeight = 0;
 
@@ -38,7 +40,6 @@ public class GameSettings : ScriptableObject
     public enum Font{
         BebasNeue,
         Itim,
-        Lobster,
         Pangolin,
         Rubik,
         YatraOne

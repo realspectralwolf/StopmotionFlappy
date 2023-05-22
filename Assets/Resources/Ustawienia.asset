@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1ec9a9f62bf8e4f9dfeede4fa77249, type: 3}
   m_Name: Ustawienia
   m_EditorClassIdentifier: 
+  gameTitle: SKOK W BOK
   playerImageSize: 0.32
   playerColliderSize: {x: 0.97, y: 0.63}
   floorHeight: 0
@@ -23,7 +24,7 @@ MonoBehaviour:
   floorAnimSpeed: 1
   pipesAnimSpeed: 1
   collectibleAnimSpeed: 1
-  font: 1
+  font: 3
   fontSize: 30
   fontColor: {r: 1, g: 1, b: 1, a: 1}
   creditsText: "Gra powsta\u0142a na zaj\u0119ciach w domu kultury ochota:\n\nAutorzy:\n-
