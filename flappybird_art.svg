@@ -2,14 +2,14 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="512"
+   width="128"
    height="512"
-   viewBox="0 0 135.46666 135.46667"
+   viewBox="0 0 33.866665 135.46667"
    version="1.1"
    id="svg5"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    sodipodi:docname="flappybird_art.svg"
-   inkscape:export-filename="Assets\Resources\Player\Variant 1\Jump\jump3.png"
+   inkscape:export-filename="Assets\RESOURCES\Mirror (128x512)\frame.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -27,9 +27,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.53984845"
-     inkscape:cx="1167.9204"
-     inkscape:cy="1828.2909"
+     inkscape:zoom="2.1593938"
+     inkscape:cx="103.26972"
+     inkscape:cy="225.98935"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -341,7 +341,7 @@
        id="path1265" />
     <g
        id="g455-5"
-       transform="matrix(1.637826,0,0,1.637826,-205.87131,-96.449972)"
+       transform="matrix(1.637826,0,0,1.637826,-131.70795,83.066947)"
        inkscape:export-filename="Assets\Resources\Bird\Variant 1\Idle\g4546.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
@@ -385,5 +385,12 @@
          ry="5.5449228"
          transform="rotate(14.96993)" />
     </g>
+    <ellipse
+       style="fill:#8a3dff;fill-opacity:1;stroke:#e58aff;stroke-width:5.70236;stroke-linecap:round;stroke-opacity:1;paint-order:fill markers stroke"
+       id="path386"
+       cx="16.933332"
+       cy="67.73333"
+       rx="11.285888"
+       ry="64.882156" />
   </g>
 </svg>
