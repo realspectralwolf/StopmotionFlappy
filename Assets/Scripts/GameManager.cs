@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
         if (skipMenu)
         {
             skipMenu = false;
-            //StartGameplay();
+            StartGameplay();
         }
 
         pipesManager.gameObject.SetActive(false);
@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
 
     public void DoGameOver()
     {
+        isGameplay = false;
         moveSpeed = 0;
     }
 

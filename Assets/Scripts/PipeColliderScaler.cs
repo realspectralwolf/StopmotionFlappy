@@ -6,6 +6,7 @@ using UnityEngine;
 public class PipeColliderScaler : MonoBehaviour
 {
     [SerializeField] Color debugColor = Color.red;
+    [SerializeField] Vector3 _scaleFactor;
 
     private void Start()
     {
@@ -27,7 +28,7 @@ public class PipeColliderScaler : MonoBehaviour
     void ApplySettingsToSelf()
     {
         Vector2 S = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
-        gameObject.GetComponent<BoxCollider2D>().size = S;
+        gameObject.GetComponent<BoxCollider2D>().size = S * _scaleFactor;
         gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(0, 0);
     }
 }

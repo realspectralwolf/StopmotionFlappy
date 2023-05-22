@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+[ExecuteInEditMode]
 public class TextUpdater : MonoBehaviour
 {
     private void Start()
@@ -11,19 +12,19 @@ public class TextUpdater : MonoBehaviour
     }
 
 #if UNITY_EDITOR
-    void OnDrawGizmos()
+    void Update()
     {
-        if (DataManager.instance == null)
-        {
-            return;
-        };
-
         ApplySettingsToSelf();
     }
 #endif
 
     void ApplySettingsToSelf()
     {
+        if (DataManager.instance == null)
+        {
+            return;
+        };
+
         var tmpText = GetComponent<TextMeshProUGUI>();
         tmpText.text = DataManager.instance.settings.creditsText;
     }

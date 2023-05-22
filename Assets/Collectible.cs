@@ -1,13 +1,20 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
+using UnityEngine.UIElements;
 
 public class Collectible : MonoBehaviour
 {
     [SerializeField] GameSettings settings;
 
+    Vector3 initialScale;
+
     private void Start()
     {
+        initialScale = transform.localScale;
+
         // choose random variant
         List<string> exisitingVariants = new();
         for (int i = 1; i < settings.maxVariants; i++)
@@ -27,8 +34,18 @@ public class Collectible : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            GameManager.instance.PointCollected();
-            gameObject.SetActive(false);
+            Sequence sequence = DOTween.Sequence();
+            sequence.Append(transform.DOScale(initialScale * 1.3f, 0.14f))
+                .Append(transform.DOScale(0f, 0.17f))
+                .OnComplete(AnimationComplete);
+            
         }
+    }
+
+    void AnimationComplete()
+    {
+        GameManager.instance.PointCollected();
+        gameObject.SetActive(false);
+        transform.localScale = initialScale;
     }
 }

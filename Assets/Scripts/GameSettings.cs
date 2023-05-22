@@ -36,11 +36,11 @@ public class GameSettings : ScriptableObject
     [HideInInspector] public int maxVariants = 10;
 
     public enum Font{
-        Atma,
-        Bangers,
-        Norican,
-        PressStart,
-        RedHat,
-        ReggaeOne
+        BebasNeue,
+        Itim,
+        Lobster,
+        Pangolin,
+        Rubik,
+        YatraOne
     }
 }

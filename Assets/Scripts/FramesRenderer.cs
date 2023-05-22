@@ -34,7 +34,7 @@ public class FramesRenderer : MonoBehaviour
     void OnEnable()
     {
         _spriteRend = GetComponent<SpriteRenderer>();
-        //InitializeAnim();
+        InitializeAnim();
     }
 
     void InitializeAnim()

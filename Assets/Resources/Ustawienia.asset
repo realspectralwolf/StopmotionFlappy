@@ -22,12 +22,13 @@ MonoBehaviour:
   backgroundAnimSpeed: 1
   floorAnimSpeed: 1
   pipesAnimSpeed: 1
-  font: 0
+  collectibleAnimSpeed: 1
+  font: 1
   fontSize: 30
   fontColor: {r: 1, g: 1, b: 1, a: 1}
   creditsText: "Gra powsta\u0142a na zaj\u0119ciach w domu kultury ochota:\n\nAutorzy:\n-
-    Amelia Johnson\r\n- Oliver Smith\r\n- Ava Davis\r\n- William Anderson\r\n- Sophia
-    Martinez\r\n- James Thompson\r\n- Isabella Rodriguez\r\n- Benjamin Lee\r\n- Mia
-    Wilson\r\n- Alexander Taylor\r\n- Charlotte Thomas\r\n- Ethan Harris\r\n- Harper
-    Robinson\r\n- Michael Walker\r\n- Evelyn Green\n"
+    Ameli \u0141apcz\xF3wn\n- Oliver Smith\r\n- Ava Davis\r\n- William Anderson\r\n-
+    Sophia Martinez\r\n- James Thompson\r\n- Isabella Rodriguez\r\n- Benjamin Lee\r\n-
+    Mia Wilson\r\n- Alexander Taylor\r\n- Charlotte Thomas\r\n- Ethan Harris\r\n-
+    Harper Robinson\r\n- Michael Walker\r\n- Evelyn Green\n"
   maxVariants: 10
