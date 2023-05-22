@@ -19,6 +19,8 @@ public class TextureImporterProcessor : AssetPostprocessor
             TextureImporter importer = (TextureImporter)assetImporter;
             importer.textureCompression = TextureImporterCompression.Compressed;
             importer.crunchedCompression = true;
+            importer.textureType = TextureImporterType.Sprite;
+            importer.spriteImportMode = SpriteImportMode.Single;
         }        
     }
 

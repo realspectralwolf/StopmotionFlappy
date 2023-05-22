@@ -2,7 +2,6 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
 using UnityEngine.UIElements;
 
 public class Collectible : MonoBehaviour
@@ -11,7 +10,7 @@ public class Collectible : MonoBehaviour
 
     Vector3 initialScale;
 
-    private void Start()
+    private void OnEnable()
     {
         initialScale = transform.localScale;
 
@@ -27,7 +26,7 @@ public class Collectible : MonoBehaviour
         }
         string variantPath = exisitingVariants[Random.Range(0, exisitingVariants.Count)];
 
-        GetComponent<FramesRenderer>().SetAnimTo(variantPath, settings.collectibleAnimSpeed);
+        GetComponent<FramesRenderer>().SetAnimTo(variantPath, settings.coinAnimSpeed);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

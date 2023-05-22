@@ -24,7 +24,7 @@ public class Floors : MonoBehaviour
 
         for (int i = 0; i < frameRends.Length; i++)
         {
-            frameRends[i].SetAnimTo(variantPath, settings.backgroundAnimSpeed);
+            frameRends[i].SetAnimTo(variantPath, settings.floorAnimSpeed);
         }
     }
 

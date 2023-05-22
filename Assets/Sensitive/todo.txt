@@ -1,6 +1,2 @@
-- scene restart
-- ui animations
-- moving platforms after some time
-- optional portal to mirror screen
-- optional coin to collect
-- optional bird rotation and stretches
+- temporary forward boost when jumping
+- tweak fall jump mechanisms for a better feel

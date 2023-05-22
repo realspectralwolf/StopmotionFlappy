@@ -31,6 +31,11 @@ public class PlayerSpriteChanger : MonoBehaviour
 
     private void PlayJumpFrames()
     {
+        if (framesRend._framesPath == $"Player (512x512)/Variant {variantIndex}/Jump")
+        {
+            return;
+        }
+
         framesRend.SetAnimTo($"Player (512x512)/Variant {variantIndex}/Jump", settings.playerJumpAnimSpeed);
         framesRend.SetNextAnim($"Player (512x512)/Variant {variantIndex}/Idle", settings.playerIdleAnimSpeed);
     }

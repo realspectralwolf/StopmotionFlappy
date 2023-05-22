@@ -25,7 +25,8 @@ public class GameSettings : ScriptableObject
     public float backgroundAnimSpeed = 1;
     public float floorAnimSpeed = 1;
     public float pipesAnimSpeed = 1;
-    public float collectibleAnimSpeed = 1;
+    public float coinAnimSpeed = 1;
+    public float portalAnimSpeed = 1;
 
     [Header("Font")]
     public Font font;

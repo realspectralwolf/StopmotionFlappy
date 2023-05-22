@@ -5,7 +5,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class FramesRenderer : MonoBehaviour
 {
-    [SerializeField] private string _framesPath;
+    [SerializeField] public string _framesPath;
     [HideInInspector] private float _framesSpeed = 1;
 
     SpriteRenderer _spriteRend = null;
@@ -40,6 +40,8 @@ public class FramesRenderer : MonoBehaviour
 
     void InitializeAnim()
     {
+        _spriteRend = GetComponent<SpriteRenderer>();
+
         LoadSpriteFrames();
 
         StopAllCoroutines();
@@ -61,6 +63,15 @@ public class FramesRenderer : MonoBehaviour
 
     private void NextFrame()
     {
+        if (_frames[_currentFrame] == null)
+        {
+            if (_frames.Length > 0)
+            {
+                InitializeAnim();
+            }
+            return;
+        }
+
         _spriteRend.sprite = _frames[_currentFrame];
         _currentFrame++;
 
@@ -86,6 +97,12 @@ public class FramesRenderer : MonoBehaviour
         }
 
         _currentFrame = 0;
+
+        if (_frames.Length == 0)
+        {
+            return;
+        }
+
         _spriteRend.sprite = _frames[0];
     }
 
@@ -97,4 +114,14 @@ public class FramesRenderer : MonoBehaviour
         PipeTop,
         PipeBottom
     }
+
+#if UNITY_EDITOR
+    void Update()
+    {
+        if (_frames.Length == 0)
+        {
+            InitializeAnim();
+        }
+    }
+#endif
 }

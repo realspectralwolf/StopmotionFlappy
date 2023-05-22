@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
         {
             fallVelocity = jumpForce;
             OnJumped?.Invoke();
+            GameManager.instance.TempForwardBoost();
         }
 
         transform.position += Vector3.up * fallVelocity * Time.deltaTime;
